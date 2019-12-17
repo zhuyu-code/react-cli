@@ -2,16 +2,20 @@
 1. 首先安装eslint
 
 `npm install eslint`
+
 2. 初始化.eslintrc.js
 
 `npx eslint --init` 
+
 3. 运行eslint
 
 `npx eslint src`
+
 4. 结合webpack，安装eslint-loader
 
 `npm install eslint-loader`
-5.加载js的时候先行eslint-loader
+
+5. 加载js的时候先行eslint-loader
 ```
    {
         test:/\.js$/,
