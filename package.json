@@ -1,0 +1,43 @@
+{
+  "name": "react-cli",
+  "version": "1.0.0",
+  "description": "从0开始配置react脚手架 ## webpack理解 ## webpack基本打包（js,css,less,html,image） ## webpack+babel ## webpack+eslint ## webpack+hot ## webpack+react ## webpack+jest",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "css-loader": "^3.3.2",
+    "extract-loader": "^3.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
+  "scripts": {
+    "build": "webpack --config=config/webpack.dev.js",
+    "start": "webpack-dev-server --config=config/webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuyu-code/react-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhuyu-code/react-cli/issues"
+  },
+  "homepage": "https://github.com/zhuyu-code/react-cli#readme"
+}
