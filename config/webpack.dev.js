@@ -1,4 +1,5 @@
-const path=require("path")
+const path=require("path");
+const webpack=require("webpack");
 module.exports={
     entry:{
         index:'./src/main.js'
@@ -9,7 +10,12 @@ module.exports={
         path: path.resolve(__dirname,"../dist"),
         publicPath:"/"
     },
-    // devServer:"",
+    devServer:{
+        contentBase:"dist",
+        hot:true,
+        open:true,
+        overlay:true
+      },
     devtool:"source-map",
     module:{
         rules:[
@@ -48,43 +54,24 @@ module.exports={
             },
             //加载html和image
             {
-
                 test: /\.html$/,
-                
                 use: [{
-                
                 loader: "file-loader",
-                
                 options: {
-                
                 name: "[name].html"
-                
-                }
-                
+                } 
                 },
-                
                 {
-                
                 //用来区别打包的js和html分开
-                
                 loader: "extract-loader"
-                
                 },
-                
                 {
-                
-                loader: "html-loader",
-                
+                loader: "html-loader",   
                 options: {
-                
-                attrs: ["img:src"]
-                
+                attrs: ["img:src"]   
                 }
-                
                 }
-                
                 ]
-                
                 },
             //加载所有的图片
             {
@@ -98,10 +85,9 @@ module.exports={
                   }
                 ]
               }
-
         ]
     },
     plugins:[
-
+        new webpack.HotModuleReplacementPlugin()
     ]
 }

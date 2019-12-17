@@ -1,9 +1,11 @@
-require("babel-runtime/regenerator")
+require("babel-runtime/regenerator");
 require("./main.less");
 require("./main.css");
 require("./index.html");
-
-console.log("zhuyu");
+if (module.hot) {
+    module.hot.accept();
+  }
+console.log("sads");
 const a="zhuyu";
 @testable
 class MyTestableClass {

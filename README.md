@@ -3,7 +3,9 @@
 ## webpack理解
 1. [webpack基本打包（js,css,less,html,image](./md/base.md)
 2. [webpack+babel](./md/babel.md)
+3. [webpack+hot](./md/hot.md)
 ## webpack+eslint
 ## webpack+hot
+
 ## webpack+react
 ## webpack+jest
