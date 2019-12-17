@@ -22,11 +22,13 @@ module.exports={
             //加载所有的js
             {
                 test:/\.js$/,
-                use:[
-                {
-                    loader:"babel-loader"
-                }
-            ],
+                use:["babel-loader",{
+                    loader:"eslint-loader",
+                    options:{
+                        fix:true
+                    },
+                    force:"pre"//强制执行在前面
+                }],
                 exclude:/node_modules/
             },
             //将less编译成css
