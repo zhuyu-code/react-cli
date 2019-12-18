@@ -2,6 +2,7 @@ require("babel-runtime/regenerator");
 require("./main.less");
 require("./main.css");
 require("./index.html");
+require("./app.js")
 if (module.hot) {
     module.hot.accept();
   }

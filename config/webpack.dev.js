@@ -2,7 +2,7 @@ const path=require("path");
 const webpack=require("webpack");
 module.exports={
     entry:{
-        index:'./src/main.js'
+        main:'./src/main.js'
     },
     mode:"development",
     output:{
@@ -21,14 +21,16 @@ module.exports={
         rules:[
             //加载所有的js
             {
-                test:/\.js$/,
-                use:["babel-loader",{
+                test:/\.(js|jsx)$/,
+                use:["babel-loader",
+                {
                     loader:"eslint-loader",
                     options:{
                         fix:true
                     },
                     //force:"pre"//强制执行在前面
-                }],
+                }
+            ],
                 exclude:/node_modules/
             },
             //将less编译成css
