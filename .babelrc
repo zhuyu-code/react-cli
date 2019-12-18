@@ -1,11 +1,17 @@
 {
-    "presets": [
-      "es2015",
-      "react",
-      "stage-2"
-    ],
-    "plugins": [
-        "transform-decorators-legacy",
-        "transform-runtime"
-    ]
-  }
+  "presets": [
+      [
+          "@babel/preset-env",
+         {
+          "targets": {
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+          }
+         }
+      ],
+  ],
+  "plugins": [
+      ["@babel/plugin-transform-runtime", {
+          "corejs": 3
+      }]
+  ]
+}

@@ -27,7 +27,7 @@ module.exports={
                     options:{
                         fix:true
                     },
-                    force:"pre"//强制执行在前面
+                    //force:"pre"//强制执行在前面
                 }],
                 exclude:/node_modules/
             },

@@ -7,16 +7,6 @@ if (module.hot) {
   }
 console.log("sads");
 const a="zhuyu";
-@testable
-class MyTestableClass {
-  // ...
-}
-
-function testable(target) {
-  target.isTestable = true;
-}
-
-MyTestableClass.isTestable // true
  const promise= new Promise((resolve,reject)=>{
       resolve("zhuyu")
   })

@@ -4,12 +4,14 @@
   "description": "从0开始配置react脚手架 ## webpack理解 ## webpack基本打包（js,css,less,html,image） ## webpack+babel ## webpack+eslint ## webpack+hot ## webpack+react ## webpack+jest",
   "main": "index.js",
   "dependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/runtime-corejs3": "^7.7.6",
+    "@campus/eslint-config-campus": "^1.1.7",
     "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-transform-decorators-legacy": "^1.3.5",
-    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.3.2",
     "eslint-friendly-formatter": "^4.0.1",
     "extract-loader": "^3.1.0",
@@ -17,6 +19,7 @@
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "regenerator-runtime": "^0.13.3",
@@ -36,7 +39,8 @@
   },
   "scripts": {
     "build": "webpack --config=config/webpack.dev.js",
-    "start": "webpack-dev-server --config=config/webpack.dev.js"
+    "start": "webpack-dev-server --config=config/webpack.dev.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
