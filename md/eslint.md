@@ -32,6 +32,8 @@
 6.配置热更新的时候，在devServer里面配置overlay:true进行页面热更新，也就是错误不支持检查在命令行窗口里面。
 7.可以通过vscode安装eslint插件帮助标记标错
 8.由于使用eslint-loader加载的时候会造成性能速度降低，使用git钩子提交进行检测
+# 配置jest
+按照官网能够test就行
 ***
 ## 参考资料
 [git hooks配置](https://www.jianshu.com/p/dc55ddd6c5c2)

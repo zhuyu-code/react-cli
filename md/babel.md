@@ -48,25 +48,38 @@
         "transform-decorators-legacy","transform-runtime"]
   }
 ```
+使用babel7之下撇脂jest会包冲突，未解决于是升级babel为版本7以上。
 2.babel7以上（采用@babel行式巨TM坑）
 * babel-cli-----------@babel/cli（babel-cli依赖了babel-core，@babel/core没有以来@babel/core，假如用cli本地测试就会报出安装@babel/core）
+* @babel/preset-env配置环境变量必须，参数具有targets设置兼容版本
+* @babel/preset-react用于识别js语法等等
+* @babel/plugin-transform-runtime配置变量不被polyfill等全局污染
+* @babel/runtime-corejs3配置实例化API被转译
+* @babel/plugin-proposal-decorators是ES6配置装饰器的升级版本
 * 最终配置
 ```
 {
-    "presets": [
-        [
-            "@babel/preset-env",
-           {
-            "targets": {
-                "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
-            }
-           }
-        ],
-    ],
-    "plugins": [
-        ["@babel/plugin-transform-runtime", {
-            "corejs": 3
-        }]
+  "presets": [
+      [
+          "@babel/preset-env",
+         {
+          "targets": {
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+          }
+         }
+      ],
+      "@babel/preset-react"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-transform-runtime", {"corejs": 3}
     ]
+  ]
 }
 ```
+***
+参考资料：
+* [babel中文文档](https://www.babeljs.cn/docs/)
+* [阮一峰babel](http://www.ruanyifeng.com/blog/2016/01/babel.html)
+* [github](https://github.com/)
+* [npm官网](https://www.npmjs.com/)

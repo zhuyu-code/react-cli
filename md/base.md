@@ -1,4 +1,19 @@
 # webpack基本打包
+* 使用`babel-loader`和`eslint-loader`加载js，jsx
+ //加载所有的js
+            {
+                test:/\.(js|jsx)$/,
+                use:["babel-loader",
+                {
+                    loader:"eslint-loader",
+                    options:{
+                        fix:true//自动固定简单的错误
+                    },
+                    //force:"pre"//强制执行在前面
+                }
+            ],
+                exclude:/node_modules/
+            },
 * 打包css
 使用`css-loader`和`style-loader`
 ```
