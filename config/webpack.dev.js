@@ -23,13 +23,13 @@ module.exports={
             {
                 test:/\.(js|jsx)$/,
                 use:["babel-loader",
-                {
-                    loader:"eslint-loader",
-                    options:{
-                        fix:true
-                    },
-                    //force:"pre"//强制执行在前面
-                }
+                // {
+                //     loader:"eslint-loader",
+                //     options:{
+                //         fix:true
+                //     },
+                //     //force:"pre"//强制执行在前面
+                // }
             ],
                 exclude:/node_modules/
             },

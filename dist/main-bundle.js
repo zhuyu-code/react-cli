@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "50740cd68298d332509b";
+/******/ 	var hotCurrentHash = "1a62462321150cf44726";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -39433,7 +39433,7 @@ function (_Component) {
           name = _name.name;
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "zhuyu"
-      }, "zhuyu");
+      }, "zhuyuzc");
     }
   }]);
 
