@@ -87,3 +87,15 @@
                 ]
               }
 ```
+* 使用插件打包css，因为css-loader和style-loader是将css内嵌入js中不能独立打包，miniCssExtractPlugin可以分离，使用
+```
+  new miniCssExtractPlugin({
+            filename:'[name].css'   //输出的css文件名，放置在dist目录下
+        }) 
+```
+* 使用htmlwebpackplugin打包html,可以完全使用模板打包。
+```
+ new HTMLWebpackPlugin({
+            template:"./src/index.html"
+          }),
+```

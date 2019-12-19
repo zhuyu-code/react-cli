@@ -1,6 +1,9 @@
 const path=require("path");
 const webpack=require("webpack");
 const{ CleanWebpackPlugin } =require("clean-webpack-plugin");
+const miniCssExtractPlugin=require('mini-css-extract-plugin');
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+const uglifyJsWebpackPlugin=require('uglifyjs-webpack-plugin')
 module.exports={
     entry:{
         main:'./src/main.js'
@@ -29,7 +32,6 @@ module.exports={
                 //     options:{
                 //         fix:true
                 //     },
-                //     //force:"pre"//强制执行在前面
                 // }
             ],
                 exclude:/node_modules/
@@ -46,15 +48,13 @@ module.exports={
             }]
         },
              //加载所有的css
-            {
-                test:/\.css$/,
-                use:[
-                {
-                    loader:"style-loader"
-                },
-                {
-                    loader:"css-loader"
-                }
+             {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader:miniCssExtractPlugin.loader
+                    },
+                    'css-loader'
                 ]
             },
             //加载html和image
@@ -94,6 +94,44 @@ module.exports={
     },
     plugins:[
         new CleanWebpackPlugin(),
-        new webpack.HotModuleReplacementPlugin()
-    ]
+        new webpack.HotModuleReplacementPlugin(),
+        new HTMLWebpackPlugin({
+            template:"./src/index.html"
+          }),
+        new miniCssExtractPlugin({
+            filename:'[name].css'   //输出的css文件名，放置在dist目录下
+        }) 
+    ],
+    optimization: {
+        splitChunks: {
+          chunks: 'all',
+          name:"zhuyu",
+          minSize: 30000,
+        //   minRemainingSize: 0,
+          maxSize: 0,
+          minChunks: 1,
+          maxAsyncRequests: 6,
+          maxInitialRequests: 4,
+          automaticNameDelimiter: '~',
+          automaticNameMaxLength: 30,
+          cacheGroups: {
+            vendors: {
+              test: /[\\/]node_modules[\\/]/,
+              priority: -10
+            },
+            default: {
+              minChunks: 2,
+              priority: -20,
+              reuseExistingChunk: true
+            }
+          }
+        },
+        minimizer:[
+            new uglifyJsWebpackPlugin({
+                cache:true,  //是否缓存
+                parallel:true,  //是否并发打包，同时打包多个文件
+                sourceMap:true  //打包后的代码与源码的映射，方便调试
+            })
+        ]
+      }
 }
