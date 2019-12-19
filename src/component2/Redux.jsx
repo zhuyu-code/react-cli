@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux"
-import {HandleChange,HandleAdd,HandleDelete} from "./util/Name"
+import {HandleChange,HandleAdd,HandleDelete} from "./util/Name";
+import './Redux.css'
  class Redux extends Component {
     render() {
         return (

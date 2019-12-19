@@ -24,6 +24,7 @@
     使用`babel-plugin-transform-runtime`进行对promise语法进行打包
 * webpack+babel
 使用`babel-loader`加载所有的js文件，然后通过`babel-core`进行babel打包
+* @babel/plugin-proposal-class-properties必须安装，在babel6貌似不用安装就可以使用操作了。
 **webpack.dev.js**:
 ```
  {
@@ -72,10 +73,11 @@
   ],
   "plugins": [
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties",{"loose":true}],
     ["@babel/plugin-transform-runtime", {"corejs": 3}
     ]
   ]
-}
+}}
 ```
 ***
 参考资料：
