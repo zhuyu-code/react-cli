@@ -5,7 +5,7 @@ const miniCssExtractPlugin=require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 module.exports={
     entry:{
-        main:'./src/main.js'
+        main:'./src/index.js'
     },
     mode:"development",
     output:{
@@ -38,13 +38,16 @@ module.exports={
             //将less编译成css
            {
             test: /\.less$/,
-            use: [{
-                loader: "style-loader" // creates style nodes from JS strings
-            }, {
-                loader: "css-loader" // translates CSS into CommonJS
-            }, {
-                loader: "less-loader" // compiles Less to CSS
-            }]
+            use: [
+                {
+                    loader: "less-loader" // compiles Less to CSS
+                },
+                {
+                    loader:miniCssExtractPlugin.loader
+                },
+                'css-loader',
+            
+        ]
         },
              //加载所有的css
              {

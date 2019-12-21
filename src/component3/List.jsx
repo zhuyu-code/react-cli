@@ -10,7 +10,7 @@ export default class List extends Component {
     render() {
         return (
             <div>
-                zhuyu
+                zhuyu2
                 <button onClick={this.handleAdd.bind(this)}>点击</button>
                 <div>{this.state.id}</div>
             </div>

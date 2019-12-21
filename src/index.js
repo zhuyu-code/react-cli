@@ -13,6 +13,6 @@ const App=()=>(
     );
 
 ReactDOM.render(
-  <Container/>,
+  <TodoList/>,
   document.getElementById("react-root")
 )

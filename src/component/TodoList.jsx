@@ -2,13 +2,14 @@ import React,{Fragment,Component} from "react"
 import Store from "./store/Store"
 import {observer} from "mobx-react"
 import {action} from "mobx"
+import './TodoList.less'
 @observer
 class TodoList extends Component{
   render(){
       return (
           <Fragment>
               <input value={Store.inputValue} onChange={this.changeInput.bind(this)}/>
-              <button type="primary" className="btn" onClick={this.addInputValue.bind(this)}>提交</button>
+              <button  className="btn" onClick={this.addInputValue.bind(this)}>提交</button>
               <div>
                   <ul>
                       {
