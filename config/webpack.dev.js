@@ -3,7 +3,6 @@ const webpack=require("webpack");
 const{ CleanWebpackPlugin } =require("clean-webpack-plugin");
 const miniCssExtractPlugin=require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-const uglifyJsWebpackPlugin=require('uglifyjs-webpack-plugin')
 module.exports={
     entry:{
         main:'./src/main.js'
@@ -60,16 +59,7 @@ module.exports={
             //加载html和image
             {
                 test: /\.html$/,
-                use: [{
-                loader: "file-loader",
-                options: {
-                name: "[name].html"
-                } 
-                },
-                {
-                //用来区别打包的js和html分开
-                loader: "extract-loader"
-                },
+                use: [
                 {
                 loader: "html-loader",   
                 options: {
@@ -102,36 +92,4 @@ module.exports={
             filename:'[name].css'   //输出的css文件名，放置在dist目录下
         }) 
     ],
-    optimization: {
-        splitChunks: {
-          chunks: 'all',
-          name:"zhuyu",
-          minSize: 30000,
-        //   minRemainingSize: 0,
-          maxSize: 0,
-          minChunks: 1,
-          maxAsyncRequests: 6,
-          maxInitialRequests: 4,
-          automaticNameDelimiter: '~',
-          automaticNameMaxLength: 30,
-          cacheGroups: {
-            vendors: {
-              test: /[\\/]node_modules[\\/]/,
-              priority: -10
-            },
-            default: {
-              minChunks: 2,
-              priority: -20,
-              reuseExistingChunk: true
-            }
-          }
-        },
-        minimizer:[
-            new uglifyJsWebpackPlugin({
-                cache:true,  //是否缓存
-                parallel:true,  //是否并发打包，同时打包多个文件
-                sourceMap:true  //打包后的代码与源码的映射，方便调试
-            })
-        ]
-      }
 }
