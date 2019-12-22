@@ -4,4 +4,5 @@
 1. [webpack基本打包（js,css,less,html,image](./md/base.md)
 2. [webpack+babel](./md/babel.md)
 3. [webpack+hot](./md/hot.md)
-4. [webpack+eslint+jest](./md/eslint.md)
+4. [webpack+eslint](./md/eslint.md)
+5. [webpack+jest](./md/jest.md)

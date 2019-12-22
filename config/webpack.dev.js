@@ -19,6 +19,9 @@ module.exports={
         open:true,
         overlay:true
       },
+      resolve: {
+        extensions: [".js", ".json", ".jsx"]
+    },
     devtool:"source-map",
     module:{
         rules:[
@@ -73,7 +76,7 @@ module.exports={
                 },
             //加载所有的图片
             {
-                test:/\.(jpg|git|png)$/,
+                test:/\.(jpg|git|png|svg)$/,
                 use:[
                   {
                     loader:"file-loader",
