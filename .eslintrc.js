@@ -5,8 +5,8 @@ module.exports = {
         "es6": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "@campus/eslint-config-campus/js"
     ],
     "globals": {
         "Atomics": "readonly",

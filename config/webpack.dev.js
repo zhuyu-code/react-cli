@@ -63,17 +63,17 @@ module.exports={
                 ]
             },
             //加载html和image
-            {
-                test: /\.html$/,
-                use: [
-                {
-                loader: "html-loader",   
-                options: {
-                attrs: ["img:src"]   
-                }
-                }
-                ]
-                },
+            // {
+            //     test: /\.html$/,
+            //     use: [
+            //     {
+            //     loader: "html-loader",   
+            //     options: {
+            //     attrs: ["img:src"]   
+            //     }
+            //     }
+            //     ]
+            //     },
             //加载所有的图片
             {
                 test:/\.(jpg|git|png|svg)$/,
