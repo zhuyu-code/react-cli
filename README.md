@@ -6,3 +6,4 @@
 3. [webpack+hot](./md/hot.md)
 4. [webpack+eslint](./md/eslint.md)
 5. [webpack+jest](./md/jest.md)
+6. [webpack+typescript](./md/ts.md)

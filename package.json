@@ -52,7 +52,7 @@
   },
   "scripts": {
     "build": "webpack --config=config/webpack.dev.js",
-    "start": "webpack-dev-server --config=config/webpack.dev.js",
+    "start": "webpack-dev-server  --history-api-fallback --config=config/webpack.dev.js",
     "test": "jest --watchAll"
   },
   "jest": {
