@@ -1,0 +1,138 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add typescript @types/react @types/react-dom -D
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/aria2/bin:/Applications/Wireshark.app/Contents/MacOS:/usr/local/mysql/bin:/usr/local/mysql/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.13.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@campus%2feslint-config-campus: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66947:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140665:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141637:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141559:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1184:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "react-cli",
+    "version": "1.0.0",
+    "description": "从0开始配置react脚手架 ## webpack理解 ## webpack基本打包（js,css,less,html,image） ## webpack+babel ## webpack+eslint ## webpack+hot ## webpack+react ## webpack+jest",
+    "main": "index.js",
+    "dependencies": {
+      "@babel/core": "^7.7.4",
+      "@babel/plugin-proposal-class-properties": "^7.7.4",
+      "@babel/plugin-proposal-decorators": "^7.7.4",
+      "@babel/plugin-transform-react-jsx": "^7.7.4",
+      "@babel/plugin-transform-runtime": "^7.7.4",
+      "@babel/polyfill": "^7.7.0",
+      "@babel/preset-env": "^7.7.4",
+      "@babel/preset-react": "^7.7.4",
+      "@babel/runtime-corejs3": "^7.7.6",
+      "@campus/eslint-config-campus": "^1.1.7",
+      "babel-eslint": "^10.0.3",
+      "babel-loader": "^8.0.6",
+      "clean-webpack-plugin": "^3.0.0",
+      "css-loader": "^3.3.2",
+      "eslint-friendly-formatter": "^4.0.1",
+      "extract-loader": "^3.1.0",
+      "extract-text-webpack-plugin": "^3.0.2",
+      "file-loader": "^5.0.2",
+      "html-loader": "^0.5.5",
+      "jest": "^24.9.0",
+      "less": "^3.10.3",
+      "less-loader": "^5.0.0",
+      "mini-css-extract-plugin": "^0.8.2",
+      "mobx": "^5.15.1",
+      "mobx-react": "^6.1.4",
+      "react": "^16.12.0",
+      "react-dom": "^16.12.0",
+      "react-hot-loader": "^4.12.18",
+      "react-redux": "^7.1.3",
+      "redux": "^4.0.4",
+      "regenerator-runtime": "^0.13.3",
+      "style-loader": "^1.0.1",
+      "webpack": "^4.41.3",
+      "webpack-cli": "^3.3.10",
+      "webpack-dev-server": "^3.9.0"
+    },
+    "devDependencies": {
+      "enzyme": "^3.11.0",
+      "enzyme-adapter-react-16": "^1.15.2",
+      "eslint": "^6.7.2",
+      "eslint-loader": "^3.0.3",
+      "eslint-plugin-react": "^7.17.0",
+      "html-webpack-plugin": "^3.2.0",
+      "jest-enzyme": "^7.1.2",
+      "uglifyjs-webpack-plugin": "^2.2.0"
+    },
+    "scripts": {
+      "build": "webpack --config=config/webpack.dev.js",
+      "start": "webpack-dev-server  --history-api-fallback --config=config/webpack.dev.js",
+      "test": "jest --watchAll"
+    },
+    "jest": {
+      "roots": [
+        "<rootDir>/src"
+      ],
+      "collectCoverageFrom": [
+        "src/**/*.{js,jsx,ts,tsx}",
+        "!src/**/*.d.ts"
+      ],
+      "setupFilesAfterEnv": ["./node_modules/jest-enzyme/lib/index.js"],
+      "testMatch": [
+        "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+        "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+      ],
+      "testEnvironment": "",
+      "transform": {
+        "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+        "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+        "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+      },
+      "transformIgnorePatterns": [
+        "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+        "^.+\\.module\\.(css|sass|scss)$"
+      ],
+      "modulePaths": [],
+      "moduleNameMapper": {
+        "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+      },
+      "moduleFileExtensions": [
+        "js",
+        "ts",
+        "tsx",
+        "json",
+        "jsx"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/zhuyu-code/react-cli.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/zhuyu-code/react-cli/issues"
+    },
+    "homepage": "https://github.com/zhuyu-code/react-cli#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -9,6 +9,7 @@ import './App.css';
         return (
             <div className="app">
                  <h1 >Welcome to React CVTE</h1>
+                 
                  <img  src={logo} className="App-logo" alt="logo" />
             </div>
         )

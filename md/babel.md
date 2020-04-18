@@ -86,3 +86,4 @@
 * [阮一峰babel](http://www.ruanyifeng.com/blog/2016/01/babel.html)
 * [github](https://github.com/)
 * [npm官网](https://www.npmjs.com/)
+* [知乎babel最终版本](https://zhuanlan.zhihu.com/p/97884144)

@@ -5,7 +5,7 @@ const miniCssExtractPlugin=require('mini-css-extract-plugin');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 module.exports={
     entry:{
-        main:'./src/index.js'
+        main:'./src/index.ts'
     },
     mode:"development",
     output:{
@@ -20,14 +20,15 @@ module.exports={
         overlay:true
       },
       resolve: {
-        extensions: [".js", ".json", ".jsx"]
+        extensions: [".js", ".json", ".jsx","ts","tsx"]
     },
     devtool:"source-map",
     module:{
         rules:[
             //加载所有的js
             {
-                test:/\.(js|jsx)$/,
+                test:/\.(ts|tsx)$/,
+                include:[path.resolve('../src')],
                 use:["babel-loader",
                 // {
                 //     loader:"eslint-loader",
